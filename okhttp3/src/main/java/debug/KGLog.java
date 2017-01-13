@@ -9,7 +9,7 @@ import android.util.Log;
  */
 public class KGLog {
 
-    private static final String TAG = "picProject";
+    private static final String TAG = "okhttp3";
 
     private static boolean isDebug = true;
 
