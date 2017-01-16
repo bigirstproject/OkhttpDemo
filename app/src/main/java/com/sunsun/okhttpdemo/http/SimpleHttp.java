@@ -1,5 +1,6 @@
 package com.sunsun.okhttpdemo.http;
 
+import java.io.File;
 import java.io.IOException;
 
 import okhttp3.MediaType;
@@ -36,6 +37,15 @@ public class SimpleHttp {
         return response.body().string();
     }
 
+    public static String requestPostTwo(String url, String json) throws IOException {
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+        Response response = client.newCall(request).execute();
+        return response.body().string();
+    }
 
 
 }
